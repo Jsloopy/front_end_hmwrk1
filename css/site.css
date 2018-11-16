@@ -43,8 +43,6 @@ body{
 
   .Chart{
     display: flex;
-    /* grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat( 1fr); */
     grid-column-gap: 10px;
     height: 80vh;
     width: 80vw;
@@ -61,7 +59,6 @@ body{
     font-size:20pt;
     font-style: bold;
     align-items:flex-end;
-    /* flex-direction:column;  */
     
     
   }
