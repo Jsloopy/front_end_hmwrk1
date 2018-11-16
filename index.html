@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/minireset.css" />
+  
     <link rel="stylesheet" href="css/site.css" />
     <title>My Bar Graph</title>
   </head>
@@ -11,15 +11,25 @@
         
 
        <div class="Container">
-          <nav class="main_nav"> US Currency Exchange Rate</nav>
+          
+        <label>Add a Currency:
+              <select class="CurrencyChooser-select" onchange = "doFetch();">
+              <option>EUR</option><option>AUD</option><option>BGN</option><option>BRL</option><option>CAD</option><option>CHF</option><option>CNY</option><option>CZK</option><option>DKK</option><option>GBP</option><option>HKD</option><option>HRK</option><option>HUF</option><option>IDR</option><option>ILS</option><option>INR</option><option>ISK</option><option>JPY</option><option>KRW</option><option>MXN</option><option>MYR</option><option>NOK</option><option>NZD</option><option>PHP</option><option>PLN</option><option>RON</option><option>RUB</option><option>SEK</option><option>SGD</option><option>THB</option><option>TRY</option><option>USD</option><option>ZAR</option></select>
+              <input onClick= "createBar();" type="submit">
+        </label>
+          
+         <nav class="main_nav"> USD Currency Exchange Rate</nav>
+
+         
         <div class="Chart">
             
-            <div onClick="alert(' 0.76 USD = 1 Canadian Dollar!')" class="BarChart-bar"> Can $ </div>
-            <div onClick="alert(' 0.17 USD = 1 Chinese Yuan!')" class="Bar2Chart-bar"> Yuan $</div>
+            <!-- <div onClick="alert(' 0.72 USD = 1 AUD!')" class="BarChart-bar"> Can $ </div>
+            <div onClick="alert(' 0.17 USD = 1 Chinese Yuan!'); doFetch()" class="Bar2Chart-bar"> Yuan $</div>
             <div onClick="alert(' 0.72 USD = 1 AUD!')" class="Bar3Chart-bar"> AUD $</div>
             <div onClick="alert(' 0.26 USD = 1 Real!')" class="Bar4Chart-bar"> Real $</div>
             <div onClick="alert(' 0.27 USD = 1 Shekel!')" class="Bar5Chart-bar"> Shekel $</div>
-        </div>
+        </div> -->
     </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>

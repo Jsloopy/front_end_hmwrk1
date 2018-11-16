@@ -7,11 +7,6 @@
 
 
 
-
-
-
-
-
 .Container{
   padding: 50px;
   display:grid;
@@ -35,19 +30,21 @@ body{
     border-radius: 5px 5px 0 0;
     background: var(--bg-bar-color);
     border-style:double;
-    transition: color 1s ; 
-    text-align: center
-
-  }
+    transition: transform 0.5s, filter 0.5s, color 1s ; 
+    text-align: center;
+    flex:1;
+    }
 
   [class*="bar"]:hover{
-    color: white
+    color: white;
+    width: 200px
+    
   }
 
   .Chart{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat( 1fr);
+    display: flex;
+    /* grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat( 1fr); */
     grid-column-gap: 10px;
     height: 80vh;
     width: 80vw;
@@ -63,6 +60,10 @@ body{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size:20pt;
     font-style: bold;
+    align-items:flex-end;
+    /* flex-direction:column;  */
+    
+    
   }
   h1{
   grid-column: 2/span1;
@@ -104,4 +105,8 @@ body{
   .Bar5Chart-bar{
     height:27%
 
+  }
+
+  [class*="bar"]:nth-child(even){
+    background:#54b96a;
   }
