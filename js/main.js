@@ -14,8 +14,8 @@ function doFetch() {
     .then(response => response.json())
     .then(api => {
         state.data = api.rates;
-    render()
-
+    render();
+    
     });
 }
 doFetch()
@@ -23,6 +23,7 @@ doFetch()
 function createBar(){
 let country = document.querySelector(".CurrencyChooser-select");
 let searchTerm = country.value;
+console.log(searchTerm)
 let chart = document.querySelector(".Chart");
 
 
@@ -43,16 +44,18 @@ chart.appendChild(bar);
 
 function render() {
     countryrate=state.data
-    console.log(countryrate)
+    // console.log(countryrate)
     let div = document.querySelector('.CurrencyChooser-select');
     div.innerHTML = '';
     let countries = Object.keys(countryrate)
     for (let count of countries) {
         let item = document.createElement('option');
         item.textContent = count;
-        console.log(count)
+        // console.log(count)
         div.appendChild(item);
     }
+    
+
 }
 
 
